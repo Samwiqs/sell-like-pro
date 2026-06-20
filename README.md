@@ -61,6 +61,153 @@ The goal is simple:
 | Communication       | Made to Stick                  | Making ideas memorable and actionable                      |
 
 ---
+# 🤖 How to Use
+
+## Quick Install
+
+```bash
+npx skills add Samwiqs/sell-like-pro
+```
+
+---
+
+## Manual Install
+
+```bash
+git clone https://github.com/Samwiqs/sell-like-pro.git
+
+for skill in sell-like-pro/*/SKILL.md; do
+  dir=$(dirname "$skill")
+  name=$(basename "$dir")
+  ln -sfn "$(pwd)/$dir" ~/.claude/skills/$name
+done
+```
+
+---
+
+Once installed, Claude automatically loads the appropriate skill based on the user's question.
+
+Examples:
+
+| Question | Skill Loaded |
+|-----------|------------|
+| "How do I run better discovery calls?" | spin-selling |
+| "How do I create a better offer?" | 100m-offers |
+| "How do I generate more leads?" | 100m-leads |
+| "How should I position my product?" | obviously-awesome |
+| "How do I improve my website copy?" | storybrand |
+| "How do I price my service?" | monetizing-innovation |
+| "How do I persuade buyers?" | influence |
+| "Which growth channel should I focus on?" | traction |
+| "How do I scale beyond early adopters?" | crossing-the-chasm |
+| "How do I escape competition?" | blue-ocean-strategy |
+
+You can also invoke any skill directly:
+
+```text
+/spin-selling
+/100m-offers
+/100m-leads
+/storybrand
+/influence
+/traction
+/obviously-awesome
+/crossing-the-chasm
+/blue-ocean-strategy
+```
+
+---
+
+## Use With ChatGPT, Gemini, or Any LLM
+
+Open the relevant `SKILL.md` file and paste it into your conversation.
+
+For deeper implementation, also provide:
+
+- `frameworks.md`
+- `examples.md`
+- `cases.md`
+- `integration.md`
+
+This allows the model to access detailed frameworks, templates, case studies, and cross-skill relationships.
+
+---
+
+## Use With Cursor, Windsurf, Roo & Cline
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Samwiqs/sell-like-pro.git
+
+cd sell-like-pro
+```
+
+Place the repository inside:
+
+```text
+/docs
+/knowledge
+/rules
+```
+
+Your AI assistant can then reference the playbooks automatically whenever sales, pricing, positioning, persuasion, or growth questions arise.
+
+---
+
+# 📂 Skill Structure
+
+Every skill follows a progressive-disclosure architecture:
+
+```text
+skill-name/
+
+├── SKILL.md
+├── frameworks.md
+├── examples.md
+├── cases.md
+└── integration.md
+```
+
+### SKILL.md
+
+Entry point for the skill.
+
+Contains:
+
+- When to use
+- Decision trees
+- Quick frameworks
+- Common mistakes
+- Skill routing
+
+### frameworks.md
+
+Detailed framework breakdowns.
+
+### examples.md
+
+Templates, worksheets, prompts, and worked examples.
+
+### cases.md
+
+Real-world success and failure case studies.
+
+### integration.md
+
+Relationships, dependencies, and conflicts between skills.
+
+---
+
+This architecture allows AI systems to load only what is needed:
+
+- SKILL.md → quick routing
+- frameworks.md → deeper understanding
+- examples.md → implementation
+- cases.md → reference
+- integration.md → cross-skill reasoning
+
+Fast, efficient, and scalable.
 
 # Repository Structure
 
@@ -83,6 +230,131 @@ founders-getting-started/
 ├── sales/
 ├── messaging/
 └── ...
+```
+# 📚 Included Playbooks
+
+Master the complete revenue lifecycle—from understanding customer psychology to building scalable growth systems.
+
+| Playbook | Source | Use When |
+|-----------|---------|-----------|
+| **diagnose** | Revenue Operating System | Not sure why sales are stalling, multiple bottlenecks, "nothing is working" |
+| **spin-selling** | SPIN Selling — Neil Rackham | B2B sales, discovery calls, enterprise deals, stakeholder management |
+| **100m-offers** | $100M Offers — Alex Hormozi | Offer creation, value stacking, increasing conversions |
+| **100m-leads** | $100M Leads — Alex Hormozi | Lead generation, outbound prospecting, inbound acquisition |
+| **influence** | Influence — Robert Cialdini | Persuasion, negotiation, buyer psychology, objection handling |
+| **storybrand** | Building a StoryBrand — Donald Miller | Website messaging, landing pages, sales copy, customer communication |
+| **made-to-stick** | Made To Stick — Chip & Dan Heath | Sales presentations, pitches, memorable messaging |
+| **monetizing-innovation** | Monetizing Innovation — Ramanujam & Tacke | Pricing strategy, packaging, willingness-to-pay research |
+| **obviously-awesome** | Obviously Awesome — April Dunford | Positioning, differentiation, category design |
+| **traction** | Traction — Gabriel Weinberg & Justin Mares | Growth channels, customer acquisition, demand generation |
+| **crossing-the-chasm** | Crossing The Chasm — Geoffrey Moore | Scaling from early adopters to mainstream markets |
+| **blue-ocean-strategy** | Blue Ocean Strategy — Kim & Mauborgne | Escaping competition, creating new market opportunities |
+| **customer-discovery** | Four Steps to the Epiphany — Steve Blank | Understanding customers before selling |
+| **lean-startup** | The Lean Startup — Eric Ries | Validation, experimentation, growth optimization |
+| **mom-test** | The Mom Test — Rob Fitzpatrick | Customer interviews, validation conversations, buyer research |
+
+---
+
+## 🎯 What You'll Learn
+
+### 💼 Sales
+
+- Discovery Calls
+- Objection Handling
+- Deal Qualification
+- Enterprise Sales
+- Multi-Stakeholder Buying
+- Closing Frameworks
+- Negotiation Strategies
+
+### 📢 Marketing
+
+- Lead Generation
+- Positioning
+- Messaging
+- Conversion Optimization
+- Demand Generation
+- Customer Acquisition
+- Content Strategy
+
+### 💰 Revenue
+
+- Pricing Strategy
+- Offer Creation
+- Revenue Optimization
+- Customer Lifetime Value
+- Upselling & Cross-Selling
+- Expansion Revenue
+
+### 🧠 Psychology
+
+- Persuasion Principles
+- Negotiation Tactics
+- Buyer Psychology
+- Trust Building
+- Behavioral Triggers
+- Decision-Making Frameworks
+
+### 📈 Growth
+
+- Growth Channels
+- Market Expansion
+- Category Creation
+- Retention Strategies
+- Growth Loops
+- Scalable Acquisition Systems
+
+---
+
+## 🚀 Recommended Learning Path
+
+```text
+1. customer-discovery
+        ↓
+2. mom-test
+        ↓
+3. obviously-awesome
+        ↓
+4. storybrand
+        ↓
+5. made-to-stick
+        ↓
+6. monetizing-innovation
+        ↓
+7. 100m-offers
+        ↓
+8. spin-selling
+        ↓
+9. influence
+        ↓
+10. traction
+        ↓
+11. 100m-leads
+        ↓
+12. crossing-the-chasm
+        ↓
+13. blue-ocean-strategy
+        ↓
+14. diagnose
+```
+
+---
+
+## ⚡ Why These Playbooks Matter
+
+Most sales teams struggle because they optimize tactics before mastering fundamentals.
+
+This collection gives you a complete operating system for:
+
+- Finding the right customers
+- Understanding buyer motivations
+- Creating irresistible offers
+- Pricing effectively
+- Running high-converting sales conversations
+- Generating consistent leads
+- Scaling revenue predictably
+
+Whether you're a founder, freelancer, consultant, agency owner, SaaS operator, or enterprise sales professional, these frameworks provide a proven path from first customer to scalable growth.
 ```
 
 Each module contains:
